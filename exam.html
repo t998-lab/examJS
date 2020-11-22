@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>       
+        </head>
+        <body>
+            <div id="exam">
+            Q1:What does HTML stand for?
+            <div id="qus1">  
+                <input type="radio" id="f" value=1 name="Q1"> 
+                Hyper Text Mother Language
+                <br>
+                <input type="radio" id="t" value=2 name="Q1"> 
+                Hyper Text Markup Language
+                <br>
+                <input type="radio" id="f" value=3 name="Q1"> 
+                Hyper Text Mother Library
+                <br>
+                <input type="radio" id="f"value=4 name="Q1"> 
+                Hyper Text Markup Library
+                </div>
+                <hr>
+                    Q2:What is the correct HTML element to define important text?
+            <div id="qus2">  
+                <input type="radio" id="f" value=1 name="Q2"> 
+                strong
+                <br>
+                <input type="radio" id="t" value=2 name="Q2"> 
+                em
+                <br>
+                <input type="radio" id="f" value=3 name="Q2"> 
+                italic
+                <br>
+                <input type="radio" id="f" value=4 name="Q2"> 
+                bolder
+                </div>
+                <hr>
+                    Q3:What is the correct HTML element to define emphasized text?
+            <div id="qus3">  
+                <input type="radio" id="f" value=1 name="Q3"> 
+                strong
+                <br>
+                <input type="radio" id="t" value=2 name="Q3"> 
+                em
+                <br>
+                <input type="radio" id="f" value=3 name="Q3"> 
+                bolder
+                <br>
+                <input type="radio" id="f"value=4 name="Q3"> 
+                emphasize
+                </div>
+                <hr>
+                <input type="button" value="Finish Exam" onclick="getResult();">
+                <!--<button id="finish">Finish Exam</button></div>-->
+                <div id="result" style="color:green;"></div>
+          
+             <script type="text/javascript">
+              function  getResult(){
+                counter=0;
+             q1 = document.getElementsByName("Q1");
+             q2 = document.getElementsByName("Q2");
+             q3 = document.getElementsByName("Q3");
+             for (i=0;i<q1.length;i++) {
+                if (q1[i].checked) {
+                    if(q1[i].value==2){counter++;}
+                }
+             }
+             for (j=0;j<q2.length;j++) {
+                if (q2[j].checked) {
+                    if(q2[j].value==1){counter++;}
+                }
+             }
+              for (y=0;y<q3.length;y++) {
+                if (q3[y].checked) {
+                    if(q3[y].value==2){counter++;}
+                }
+             }
+           //document.getElementById("exam").style.display = "none";
+           document.getElementById("result").innerHTML="Result : "+counter;
+             
+              }
+           
+            </script>
+  
+        </body>
+    </html>
